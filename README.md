@@ -9,7 +9,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 
 # Home work Week 4
 1. Deploy Jenkins and Grafana on kubernetes.
-2. Create github repo with https://github.com/user-name/b5124817-xxxxx.
+2. Create github repo with https://github.com/user-name/b5124817-xxxxx
    - Create folder jenkins and grafana
    - Add file
      - deployment.yaml
