@@ -3,6 +3,13 @@
 ### Week 5 https://forms.gle/Vtb4Gng8Xf413F9b9
 ### Week 9 https://forms.gle/CH9Nvh8uDLMVY1Hj7
 
+
+# Install terraform
+### https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+
+
+
+
 #Install ingress
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml
