@@ -1,0 +1,26 @@
+groups:
+  - name: app_alerts
+    rules:
+      # 1. แจ้งเตือนเมื่อ Service ล่ม (Down)
+      - alert: InstanceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Instance {{ $labels.instance }} down"
+          description: "Service {{ $labels.job }} ล่มมานานกว่า 1 นาทีแล้ว"
+
+      # 2. แจ้งเตือนเมื่อ HTTP Error (5xx) สูงเกิน 5%
+      - alert: HighErrorRate
+        expr: |
+          (sum(rate(flask_http_request_total{status=~"5.."}[5m])) 
+          / 
+          sum(rate(flask_http_request_total[5m]))) > 0.05
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Error rate สูงใน {{ $labels.job }}"
+          description: "Backend พ่น Error 5xx มากกว่า 5% ในช่วง 5 นาทีที่ผ่านมา"
+

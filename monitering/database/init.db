@@ -1,0 +1,12 @@
+-- สร้างตารางสำหรับเก็บข้อความถ้ายังไม่มี
+CREATE TABLE IF NOT EXISTS messages (
+    id SERIAL PRIMARY KEY,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- เพิ่มข้อมูลตัวอย่าง (Optional)
+INSERT INTO messages (content) VALUES ('ข้อความเริ่มต้นจากระบบ');
+
+-- สร้างดัชนี (Index) เพื่อช่วยให้ค้นหาข้อมูลเร็วขึ้น (ถ้ามีการดึงข้อมูลเยอะๆ ในอนาคต)
+CREATE INDEX IF NOT EXISTS idx_messages_created_at ON messages(created_at);

@@ -1,0 +1,18 @@
+{
+	"ulid": "01KQFNAXTCACB14HN2M1HGBANR",
+	"minTime": 1777557608737,
+	"maxTime": 1777564800000,
+	"stats": {
+		"numSamples": 539921,
+		"numFloatSamples": 539921,
+		"numSeries": 1127,
+		"numChunks": 4512
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01KQFNAXTCACB14HN2M1HGBANR"
+		]
+	},
+	"version": 1
+}
