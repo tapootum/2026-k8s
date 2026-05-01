@@ -9,4 +9,4 @@ spec:
     - protocol: TCP
       port: 8080         # Port ของ Service
       targetPort: 8080   # Port ของ Pod ที่ต้องการส่งไปหา
-  type: ClusterIP
+  type: LoadBalancer

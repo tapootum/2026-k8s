@@ -11,7 +11,7 @@ metrics.info('app_info', 'Backend Application info', version='1.0.0')
 
 def get_db_connection():
     return psycopg2.connect(
-        host='localhost',
+        host='192.168.199.233',
         database='mydatabase',
         user='user',
         password='password',

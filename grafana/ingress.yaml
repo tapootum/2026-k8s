@@ -3,7 +3,8 @@ kind: Ingress
 metadata:
   name: nginx-ingress-grafana
   annotations:
-    kubernetes.io/ingress.class: "nginx" # ระบุว่าใช้ Ingress Controller ตัวไหน
+    ingressClassName: nginx
+    #kubernetes.io/ingress.class: "ingress-nginx" # ระบุว่าใช้ Ingress Controller ตัวไหน
 spec:
   rules:
   - host: grafana.local  # Domain ที่เราต้องการใช้งาน
